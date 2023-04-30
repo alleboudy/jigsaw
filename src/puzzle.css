@@ -11,24 +11,16 @@
 
 /* for the jigsaw puzzle container */
 .jigsaw-puzzle {
-    width: 50%;
-    height: 100%;
-    border: 2px solid rgba(0, 0, 0, 0.187);
-    margin: auto;
+    width: 49%;
+    border: 1em solid rgba(0, 0, 0, 0.187);
     box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
 }
 
 
 .puzzle-body {
-    align-items: center;
-    float: left;
+    float: right;
     padding: 2rem;
     margin: 4rem;
-}
-
-.controls {
-
-    margin: 1rem;
 }
 
 .controls button {

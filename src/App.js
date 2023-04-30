@@ -25,7 +25,7 @@ function App() {
     window.location.reload(false);
   }
   return (
-    <>
+    <span>
 
       <span className="puzzle-body">
         <h2 className="tag">{text}</h2>
@@ -52,7 +52,7 @@ function App() {
         className="jigsaw-puzzle"
       />
 
-    </>
+    </span>
   );
 }
 
