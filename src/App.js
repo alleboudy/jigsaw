@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import "./puzzle.css";
-import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
-import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
+import { JigsawPuzzle } from "./react-jigsaw-puzzle/lib";
+import "./react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import img from "./puzzle-img.png";
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
@@ -17,6 +17,7 @@ function App() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    setText("Hi!");
   };
   const set = () => {
     setText("Please don't leave! ... refresh to play again :D");
