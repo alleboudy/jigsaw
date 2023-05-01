@@ -14,16 +14,19 @@ function valuetext(value) {
 function App() {
   const [text, setText] = useState("Hi!");
   const [value, setValue] = React.useState(3);
+  const [sliderVisibility, showSlider] = React.useState(true);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
     setText("Hi!");
+    showSlider(true);
   };
   const set = () => {
     setText("Please don't leave! ... refresh to play again :D");
+    showSlider(false);
   };
   function refreshPage() {
-    window.location.reload(false);
+    window.location.reload(true);
   }
   return (
     <span>
@@ -33,7 +36,7 @@ function App() {
         <div className="controls"><button onClick={refreshPage}>Click to reload!</button></div>
         <br />
         <Box sx={{ width: 300 }}>
-          <Slider
+          {sliderVisibility && <Slider
             aria-label="Always visible"
             defaultValue={3}
             getAriaValueText={valuetext}
@@ -43,7 +46,9 @@ function App() {
             max={30}
             value={value} onChange={handleChange}
           />
+          }
         </Box>
+
       </span>
       <JigsawPuzzle
         imageSrc={img}
